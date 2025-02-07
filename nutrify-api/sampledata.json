@@ -1,0 +1,277 @@
+[
+    {
+      "name": "Apple",
+      "protein": 0.47,
+      "fat": 0.31,
+      "fiber": 2.4,
+      "carbohydrates": 25.13,
+      "calories": 95,
+      "image_url": "https://cdn.pixabay.com/photo/2018/08/02/21/51/apples-3580560_1280.jpg"
+    },
+    {
+      "name": "Chicken Breast (Skinless, Boneless)",
+      "protein": 31,
+      "fat": 3.6,
+      "fiber": 0,
+      "carbohydrates": 0,
+      "calories": 165,
+      "image_url": "https://cdn.pixabay.com/photo/2014/03/05/01/20/chicken-breast-279847_1280.jpg"
+    },
+    {
+      "name": "Broccoli",
+      "protein": 2.82,
+      "fat": 0.37,
+      "fiber": 2.6,
+      "carbohydrates": 6.64,
+      "calories": 55,
+      "image_url": "https://cdn.pixabay.com/photo/2016/03/05/19/02/broccoli-1238250_1280.jpg"
+    },
+    {
+      "name": "Whole Wheat Bread",
+      "protein": 3.58,
+      "fat": 1.18,
+      "fiber": 2.6,
+      "carbohydrates": 12.4,
+      "calories": 69,
+      "image_url": "https://cdn.pixabay.com/photo/2019/05/06/14/24/bread-4183225_1280.jpg"
+    },
+    {
+      "name": "Banana",
+      "protein": 1.29,
+      "fat": 0.39,
+      "fiber": 2.6,
+      "carbohydrates": 26.95,
+      "calories": 105,
+      "image_url": "https://cdn.pixabay.com/photo/2018/09/24/20/12/bananas-3700718_1280.jpg"
+    },
+    {
+      "name": "Salmon (Wild-Caught)",
+      "protein": 25.5,
+      "fat": 11.94,
+      "fiber": 0,
+      "carbohydrates": 0,
+      "calories": 206,
+      "image_url": "https://cdn.pixabay.com/photo/2014/11/05/15/57/salmon-518032_1280.jpg"
+    },
+    {
+      "name": "Brown Rice",
+      "protein": 5.54,
+      "fat": 1.16,
+      "fiber": 3.52,
+      "carbohydrates": 44.77,
+      "calories": 215,
+      "image_url": "https://cdn.pixabay.com/photo/2020/04/02/11/50/brown-rice-4994747_1280.jpg"
+    },
+    {
+      "name": "Eggs",
+      "protein": 6.28,
+      "fat": 4.97,
+      "fiber": 0,
+      "carbohydrates": 0.63,
+      "calories": 68,
+      "image_url": "https://cdn.pixabay.com/photo/2017/09/18/14/49/egg-sandwich-2761894_1280.jpg"
+    },
+    {
+      "name": "Spinach",
+      "protein": 2.86,
+      "fat": 0.39,
+      "fiber": 2.2,
+      "carbohydrates": 3.63,
+      "calories": 23,
+      "image_url": "https://cdn.pixabay.com/photo/2016/07/16/16/30/spinach-1522283_1280.jpg"
+    },
+    {
+      "name": "Milk (Whole)",
+      "protein": 3.15,
+      "fat": 3.25,
+      "fiber": 0,
+      "carbohydrates": 4.93,
+      "calories": 61,
+      "image_url": "https://cdn.pixabay.com/photo/2016/08/11/23/25/glass-1587258_1280.jpg"
+    },
+    {
+      "name": "Carrot",
+      "protein": 0.93,
+      "fat": 0.24,
+      "fiber": 2.8,
+      "carbohydrates": 12.26,
+      "calories": 52,
+      "image_url": "https://cdn.pixabay.com/photo/2015/03/14/14/00/carrots-673184_1280.jpg"
+    },
+    {
+      "name": "Ground Beef (Lean)",
+      "protein": 26.8,
+      "fat": 11.05,
+      "fiber": 0,
+      "carbohydrates": 0,
+      "calories": 250,
+      "image_url": "https://cdn.pixabay.com/photo/2020/04/27/05/30/roast-5098185_1280.jpg"
+    },
+    {
+      "name": "Potato",
+      "protein": 2.02,
+      "fat": 0.15,
+      "fiber": 2.2,
+      "carbohydrates": 28.02,
+      "calories": 130,
+      "image_url": "https://cdn.pixabay.com/photo/2014/08/06/20/32/potatoes-411975_1280.jpg"
+    },
+    {
+      "name": "Greek Yogurt",
+      "protein": 10.21,
+      "fat": 0.42,
+      "fiber": 0,
+      "carbohydrates": 3.6,
+      "calories": 59,
+      "image_url": "https://cdn.pixabay.com/photo/2016/06/07/17/15/yogurt-1442034_1280.jpg"
+    },
+    {
+      "name": "Peanut Butter",
+      "protein": 7.02,
+      "fat": 16.1,
+      "fiber": 2,
+      "carbohydrates": 6.94,
+      "calories": 188,
+      "image_url": "https://cdn.pixabay.com/photo/2016/03/05/21/50/board-1239114_1280.jpg"
+    },
+    {
+      "name": "Orange",
+      "protein": 1.23,
+      "fat": 0.16,
+      "fiber": 2.4,
+      "carbohydrates": 15.39,
+      "calories": 62,
+      "image_url": "https://cdn.pixabay.com/photo/2016/10/07/13/36/tangerines-1721590_1280.jpg"
+    },
+    {
+      "name": "Tuna (Canned in Water)",
+      "protein": 29.13,
+      "fat": 0.82,
+      "fiber": 0,
+      "carbohydrates": 0,
+      "calories": 132,
+      "image_url": "https://cdn.pixabay.com/photo/2015/09/23/16/51/tuna-fish-954073_1280.jpg"
+    },
+    {
+      "name": "Oatmeal",
+      "protein": 5.94,
+      "fat": 2.25,
+      "fiber": 3.94,
+      "carbohydrates": 27.88,
+      "calories": 150,
+      "image_url": "https://cdn.pixabay.com/photo/2016/11/19/14/18/oatmeal-1839515_1280.jpg"
+    },
+    {
+      "name": "Almonds",
+      "protein": 6.75,
+      "fat": 14.22,
+      "fiber": 3.5,
+      "carbohydrates": 6.77,
+      "calories": 163,
+      "image_url": "https://cdn.pixabay.com/photo/2016/10/25/12/56/almonds-1768792_1280.jpg"
+    },
+    {
+      "name": "Green Beans",
+      "protein": 1.82,
+      "fat": 0.22,
+      "fiber": 3.6,
+      "carbohydrates": 6.97,
+      "calories": 31,
+      "image_url": "https://cdn.pixabay.com/photo/2014/11/06/17/31/green-beans-519439_1280.jpg"
+    },
+    {
+      "name": "Pizza (Pepperoni, Regular Crust)",
+      "protein": 12.8,
+      "fat": 12.6,
+      "fiber": 1.6,
+      "carbohydrates": 29.4,
+      "calories": 298,
+      "image_url": "https://cdn.pixabay.com/photo/2017/12/09/08/18/pizza-3007395_1280.jpg"
+    },
+    {
+      "name": "Ice Cream (Vanilla, Regular)",
+      "protein": 3.5,
+      "fat": 10,
+      "fiber": 0.4,
+      "carbohydrates": 23,
+      "calories": 207,
+      "image_url": "https://cdn.pixabay.com/photo/2017/04/18/15/10/strawberry-ice-cream-2239377_1280.jpg"
+    },
+    
+    {
+        "name": "Dal (Cooked Lentils, Moong Dal)",
+        "protein": 7.1,
+        "fat": 1.1,
+        "fiber": 1.8,
+        "carbohydrates": 18.6,
+        "calories": 104,
+        "image_url": "https://www.cubesnjuliennes.com/wp-content/uploads/2023/10/Yellow-Dal-Recipe-500x500.jpg"
+    },
+    {
+        "name": "Chicken Curry",
+        "protein": 26,
+        "fat": 16,
+        "fiber": 1.2,
+        "carbohydrates": 12,
+        "calories": 280,
+        "image_url": "https://cdn.pixabay.com/photo/2022/06/07/20/52/curry-7249247_1280.jpg"
+    },
+    {
+        "name": "Aloo Gobi (Potato and Cauliflower Curry)",
+        "protein": 3.6,
+        "fat": 11,
+        "fiber": 3.2,
+        "carbohydrates": 18.2,
+        "calories": 187,
+        "image_url": "https://ministryofcurry.com/wp-content/uploads/2017/04/Aloo-Gobi-5.jpg"
+    },
+    {
+        "name": "Roti (Whole Wheat Bread)",
+        "protein": 2.9,
+        "fat": 0.8,
+        "fiber": 1.8,
+        "carbohydrates": 12,
+        "calories": 70,
+        "image_url": "https://ministryofcurry.com/wp-content/uploads/2020/01/roti-1-scaled.jpg"
+    },
+    {
+        "name": "Paneer Tikka",
+        "protein": 18,
+        "fat": 13,
+        "fiber": 1.5,
+        "carbohydrates": 7,
+        "calories": 230,
+        "image_url": "https://cdn.pixabay.com/photo/2020/03/18/07/19/dish-4943028_1280.jpg"
+    },
+    {
+        "name": "Sambar",
+        "protein": 3.5,
+        "fat": 1.5,
+        "fiber": 2.9,
+        "carbohydrates": 14.2,
+        "calories": 96,
+        "image_url": "https://www.cubesnjuliennes.com/wp-content/uploads/2021/01/South-Indian-Sambar-Recipe.jpg"
+    },
+    {
+        "name": "Idli",
+        "protein": 2.1,
+        "fat": 0.2,
+        "fiber": 0.9,
+        "carbohydrates": 26.8,
+        "calories": 150,
+        "image_url": "https://www.vegrecipesofindia.com/wp-content/uploads/2021/06/idli-recipe-4-500x500.jpg"
+    },
+    {
+        "name": "Samosa",
+        "protein": 6.5,
+        "fat": 12.3,
+        "fiber": 2.5,
+        "carbohydrates": 32,
+        "calories": 250,
+        "image_url": "https://cdn.pixabay.com/photo/2023/10/09/04/19/samosa-8303211_1280.jpg"
+    }
+    
+]
+      
+  
+  
