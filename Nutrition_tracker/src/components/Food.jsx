@@ -26,18 +26,18 @@ export default function Food(props)
     {
 
 
-            if(event.target.value<=5000 && event.target.value>=0)
+            if(event.target.value.length!=0)
             {
                 let quantity = Number(event.target.value);
                 setEatenQuantity(quantity);
 
                 let copyFood = {...food};
 
-                copyFood.protein = ((foodInitial.protein*quantity)/100).toFixed(2);
-                copyFood.carbohydrates = ((foodInitial.carbohydrates*quantity)/100).toFixed(2);
-                copyFood.fat = ((foodInitial.fat*quantity)/100).toFixed(2);
-                copyFood.fiber = ((foodInitial.fiber*quantity)/100).toFixed(2);
-                copyFood.calories = ((foodInitial.calories*quantity)/100).toFixed(2);
+                copyFood.protein = (foodInitial.protein*quantity)/100;
+                copyFood.carbohydrates = (foodInitial.carbohydrates*quantity)/100;
+                copyFood.fat = (foodInitial.fat*quantity)/100;
+                copyFood.fiber = (foodInitial.fiber*quantity)/100;
+                copyFood.calories = (foodInitial.calories*quantity)/100;
 
                 setFood(copyFood);
             }
@@ -48,30 +48,17 @@ export default function Food(props)
     }
 
 
-    function trackFoodItem()
-    {
-        let trackedItem = {
-            userId:loggedData.loggedUser.userid,
-            foodId:food._id,
-            details:{
-                protein:food.protein,
-                carbohydrates:food.carbohydrates,
-                fat:food.fat,
-                fiber:food.fiber,
-                calories:food.calories
-            },
-            quantity:eatenQuantity
-        }
-
-
-        console.log(trackedItem);
-
-        fetch("http://localhost:8000/track",{
-            method:"POST",
-            body:JSON.stringify(trackedItem),
-            headers:{
-                "Authorization":`Bearer ${loggedData.loggedUser.token}`,
-                "Content-Type":"application/json"
+    function handleTrack() {
+        const apiUrl = import.meta.env.VITE_API_URL;
+        fetch(`${apiUrl}/track`, {
+            method: "POST",
+            body: JSON.stringify({
+                ...food,
+                quantity: eatenQuantity
+            }),
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${loggedData.loggedUser.token}`
             }
         })
         .then((response)=>response.json())
@@ -81,24 +68,17 @@ export default function Food(props)
         .catch((err)=>{
             console.log(err);
         })
-
-
     }
 
     return (
         <div className="food">
-            <div className="image-wrapper">
-                
-                
-                <div className="food-img">
-                    <img className="food-image" src={food.image_url}/>
-                </div>
 
-                <h3>{food.name} ({food.calories} Kcal for {eatenQuantity}G)</h3>
-                
+            <div className="food-img">
+                <img className="food-image" src={food.imageUrl}/>
             </div>
 
-            <div className="nutrients-wrapper">
+            <h3>{food.name} ({food.calories} Kcal for {eatenQuantity}G)</h3>
+
             <div className="nutrient">
                 <p className="n-title">Protein</p>
                 <p className="n-value">{food.protein}g</p>
@@ -118,18 +98,25 @@ export default function Food(props)
                 <p className="n-title">Fibre</p>
                 <p className="n-value">{food.fiber}g</p>
             </div>
-            </div>
 
 
             <div className="track-control">
 
                 <input type="number" onChange={calculateMacros}
-                className="inp" placeholder="Quantity in Gms" min="0" max="5000"/>
+                className="inp" placeholder="Quantity in Gms"/>
 
-                <button className="btn" onClick={trackFoodItem}>Track</button>
+                <button className="btn" onClick={handleTrack}>Track</button>
 
 
             </div>
+
+            
+
+            
+
+
+
+
         </div>
     )
-}  
+}
