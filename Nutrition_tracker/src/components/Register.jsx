@@ -28,9 +28,8 @@ const Register = () => {
     }
     function handleSubmit(event){
             event.preventDefault();
-            // console.log(userDetails);
-
-            fetch("http://localhost:8000/register",{
+            const apiUrl = import.meta.env.VITE_API_URL;
+            fetch(`${apiUrl}/register`,{
                 method:"POST",
                 body:JSON.stringify(userDetails),
                 headers:{
@@ -64,7 +63,8 @@ const Register = () => {
 
             <form className="form" onSubmit={handleSubmit}>
 
-                <h1>Start Your Fitness Journey</h1>
+                <h1 style={{marginBottom: 0}}>Create Account</h1>
+                <p style={{marginTop: 0, color: '#888', fontSize: '1rem', marginBottom: '18px'}}>Join Nutrify and start your fitness journey</p>
 
                 <input className="inp" type="text" required onChange={handleInput}
                 placeholder="Enter Name" name="name" value={userDetails.name}/>
@@ -72,19 +72,17 @@ const Register = () => {
                 <input className="inp" type="email" required onChange={handleInput} 
                 placeholder="Enter Email" name="email" value={userDetails.email}/>
 
-                <input className="inp" type="password" required maxLength={8} onChange={handleInput} 
+                <input className="inp" type="password" required maxLength={32} onChange={handleInput} 
                 placeholder="Enter Password" name="password" value={userDetails.password}/>
 
                 <input className="inp" max={100} min={12} type="number" onChange={handleInput}
                 placeholder="Enter Age" name="age" value={userDetails.age}/>
 
-                <button className="btn">Join</button>
+                <button className="btn" type="submit">Join</button>
 
-               
+                <p style={{fontSize: '0.97rem', margin: '8px 0 0 0'}}>Already registered? <Link to="/login">Login</Link></p>
 
-                <p>Already Registered ?  <Link to="/login">Login</Link> </p>
-
-                <p className={message.type}>{message.text}</p>
+                <p className={message.type} style={{margin: 0}}>{message.text}</p>
 
             </form>
 
