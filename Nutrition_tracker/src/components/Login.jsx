@@ -1,4 +1,4 @@
-import { useState, useContext ,useEffect} from "react"
+import { useState,useContext, useEffect } from "react"
 import { UserContext } from "../contexts/UserContext";
 import { Link,useNavigate } from "react-router-dom"
 export default function Login()
@@ -11,13 +11,6 @@ export default function Login()
 
 
     const navigate = useNavigate();
-
-    useEffect(()=>{
-        if(loggedData.loggedUser!=null){
-          navigate("/track");
-        }
-        },[]);
-    
 
     const [userCreds,setUserCreds] = useState({
         email:"",
@@ -41,9 +34,10 @@ export default function Login()
     function handleSubmit(event)
     {   
         event.preventDefault();
-        // console.log(userCreds);
+        const apiUrl = import.meta.env.VITE_API_URL;
+        console.log(userCreds);
 
-        fetch("http://localhost:8000/login",{
+        fetch(`${apiUrl}/login`,{
             method:"POST",
             body:JSON.stringify(userCreds),
             headers:{
@@ -54,10 +48,10 @@ export default function Login()
 
             if(response.status===404)
             {
-                setMessage({type:"error",text:"Username or Email Doesnt Exist"});
+                setMessage({type:"error",text:"Username or Email doesn't exist."});
             }
             else if(response.status===403) {
-                setMessage({type:"error",text:"Incorrect Password"});
+                setMessage({type:"error",text:"Incorrect password."});
             }
            
 
@@ -71,7 +65,7 @@ export default function Login()
         })
         .then((data)=>{
 
-           console.log(data);
+           
 
             if(data.token!==undefined)
             {
@@ -96,20 +90,21 @@ export default function Login()
 
             <form className="form" onSubmit={handleSubmit}>
 
-                <h1>Login To Fitness</h1>
+                <h1 style={{marginBottom: 0}}>Welcome Back</h1>
+                <p style={{marginTop: 0, color: '#888', fontSize: '1rem', marginBottom: '18px'}}>Login to your Nutrify account</p>
 
                 <input className="inp" required type="email" onChange={handleInput}
                 placeholder="Enter Email" name="email" value={userCreds.email}/>
 
-                <input className="inp" maxLength={8} type="password" onChange={handleInput} 
+                <input className="inp" maxLength={32} type="password" onChange={handleInput} 
                 placeholder="Enter Password" name="password" value={userCreds.password}/>
      
 
-                <button className="btn">Login</button>
+                <button className="btn" type="submit">Login</button>
 
-                <p>Dont Have a Account ? <Link to="/register">Register Now</Link></p>
+                <p style={{fontSize: '0.97rem', margin: '8px 0 0 0'}}>Don't have an account? <Link to="/register">Register Now</Link></p>
 
-                <p className={message.type}>{message.text}</p>
+                <p className={message.type} style={{margin: 0}}>{message.text}</p>
 
             </form>
 
